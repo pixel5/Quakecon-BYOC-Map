@@ -1,0 +1,387 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 9, 2014, 4:04:22 PM
+    Author     : abaxter
+*/
+
+#byoc-markup-div {
+  width:100%;
+  height:100%;
+}
+
+#byoc-map {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:993px;
+  position:relative;
+  height:100%;
+}
+
+#byoc-noc {
+  clear:both;
+	width:228px;
+	height:255px;
+	background:#aaa;
+	position:absolute;
+	left:247px;
+	top:930px;
+	z-index:2;
+}
+@-moz-document url-prefix() {
+    #byoc-noc {
+        top:946px;
+    }
+}
+
+.noc-text {
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	position:relative;
+	top:45%;
+	font-size:40px;
+	color:#333;
+	font-family:Arial;
+	font-weight:bold;
+}
+
+.byoc {
+  width:14px;
+  height:14px;
+  background: #E26C0A;
+  border:2px solid #555;
+  margin-right:5px;
+  display:inline-block;
+}
+
+a.byoc:hover, a.byoc-highlighted:hover, a.byoc-noseat:hover {
+  cursor:default;
+}
+
+.byoc-even {
+  display:block;
+  padding-bottom:14px;
+}
+
+.byoc-odd {
+  display:block;
+  margin-bottom:-5px;
+}
+
+.byoc-noseat {
+  width:14px;
+  height:14px;
+  background: #fff;
+  border:2px solid #eee;
+  margin-right:5px;
+  display:inline-block;
+}
+
+#byoc-A {
+  display:block;
+  float:left;
+  margin-right:49px;
+  padding:10px;
+  background:#d0d0d0;
+  background-image:url('/images/bg_a.png');
+  background-repeat:repeat-y;
+  background-position: center top;
+}
+
+#byoc-B {
+  display:block;
+  float:left;
+  margin-right:48px;
+  padding:10px;
+  background:#d0d0d0;
+  background-image:url('/images/bg_b.png');
+  background-repeat:repeat-y;
+  background-position: center top;
+}
+
+#byoc-C {
+  display:block;
+  float:left;
+  padding:10px;
+  background:#d0d0d0;
+  background-image:url('/images/bg_c.png');
+  background-repeat:no-repeat;
+  background-position: center top;
+}
+
+.byoc-clear-fix {
+  clear:both;
+}
+
+.byoc-norow.byoc-even {
+  height:36px;
+  display:block;
+  padding-bottom:0;
+}
+
+.byoc-norow.byoc-odd {
+  height:22px;
+  display:block;
+  padding-bottom:0;
+}
+
+.byoc-highlighted {
+  width:14px;
+  height:14px;
+  background: #cc0000;
+  border:2px solid #ff0000;
+  margin-right:5px;
+  display:inline-block;
+  -webkit-animation-duration: 1.5s; 
+  animation-duration: 1.5s; 
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+  -webkit-animation-timing-function: linear; 
+  animation-timing-function: linear; 
+  animation-iteration-count:infinite; 
+  -webkit-animation-iteration-count:infinite; 
+  -webkit-animation-name: flash; 
+  animation-name: flash; 
+}
+
+@-webkit-keyframes flash { 
+  0%, 50%, 100% {
+    opacity: 1;
+    -webkit-box-shadow: 0px 2px 15px 4px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 15px 4px rgba(255,255,255,1);
+    box-shadow: 0px 2px 15px 4px rgba(255,255,255,1);
+  } 
+  25%, 75% {opacity: 0.2;
+            -webkit-box-shadow: 0px 2px 20px -8px rgba(255,255,255,1);
+            -moz-box-shadow: 0px 2px 20px -8px rgba(255,255,255,1);
+            box-shadow: 0px 2px 20px -8px rgba(255,255,255,1);
+  }  
+} 
+@keyframes flash { 
+  0%, 50%, 100% {
+    opacity: 1;
+    -webkit-box-shadow: 0px 2px 15px 4px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 2px 15px 4px rgba(255,255,255,1);
+    box-shadow: 0px 2px 15px 4px rgba(255,255,255,1);
+  } 
+  25%, 75% {opacity: 0.2;
+            -webkit-box-shadow: 0px 2px 20px -8px rgba(255,255,255,1);
+            -moz-box-shadow: 0px 2px 20px -8px rgba(255,255,255,1);
+            box-shadow: 0px 2px 20px -8px rgba(255,255,255,1);
+  }  
+} 
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #555;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #555;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #555;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #555;
+}
+
+a[href="#UAC-01"] {
+	position:absolute;
+	z-index:3;
+	bottom:15px;
+	right:15px;
+}
+a[href="#UAC-02"] {
+	position:absolute;
+	z-index:3;
+	bottom:34px;
+	right:15px;
+}
+a[href="#UAC-03"] {
+	position:absolute;
+	z-index:3;
+	bottom:53px;
+	right:15px;
+}
+a[href="#UAC-04"] {
+	position:absolute;
+	z-index:3;
+	bottom:72px;
+	right:15px;
+}
+a[href="#UAC-05"] {
+	position:absolute;
+	z-index:3;
+	bottom:91px;
+	right:15px;
+}
+a[href="#UAC-06"] {
+	position:absolute;
+	z-index:3;
+	bottom:110px;
+	right:15px;
+}
+a[href="#UAC-07"] {
+	position:absolute;
+	z-index:3;
+	bottom:129px;
+	right:15px;
+}
+a[href="#UAC-08"] {
+	position:absolute;
+	z-index:3;
+	bottom:148px;
+	right:15px;
+}
+a[href="#UAC-09"] {
+	position:absolute;
+	z-index:3;
+	bottom:167px;
+	right:15px;
+}
+a[href="#UAC-10"] {
+	position:absolute;
+	z-index:3;
+	bottom:186px;
+	right:15px;
+}
+a[href="#UAC-11"] {
+	position:absolute;
+	z-index:3;
+	bottom:205px;
+	right:15px;
+}
+a[href="#UAC-12"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:15px;
+}
+a[href="#UAC-13"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:34px;
+}
+a[href="#UAC-14"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:53px;
+}
+a[href="#UAC-15"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:72px;
+}
+a[href="#UAC-16"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:91px;
+}
+a[href="#UAC-17"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:110px;
+}
+a[href="#UAC-18"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:129px;
+}
+a[href="#UAC-19"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:148px;
+}
+a[href="#UAC-20"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:167px;
+}
+a[href="#UAC-21"] {
+	position:absolute;
+	z-index:3;
+	bottom:224px;
+	right:186px;
+}
+
+a[href="#UAC-32"] {
+	position:absolute;
+	z-index:3;
+	bottom:15px;
+	left:23px;
+}
+a[href="#UAC-31"] {
+	position:absolute;
+	z-index:3;
+	bottom:34px;
+	left:23px;
+}
+a[href="#UAC-30"] {
+	position:absolute;
+	z-index:3;
+	bottom:53px;
+	left:23px;
+}
+a[href="#UAC-29"] {
+	position:absolute;
+	z-index:3;
+	bottom:72px;
+	left:23px;
+}
+a[href="#UAC-28"] {
+	position:absolute;
+	z-index:3;
+	bottom:91px;
+	left:23px;
+}
+a[href="#UAC-27"] {
+	position:absolute;
+	z-index:3;
+	bottom:110px;
+	left:23px;
+}
+a[href="#UAC-26"] {
+	position:absolute;
+	z-index:3;
+	bottom:129px;
+	left:23px;
+}
+a[href="#UAC-25"] {
+	position:absolute;
+	z-index:3;
+	bottom:148px;
+	left:23px;
+}
+a[href="#UAC-24"] {
+	position:absolute;
+	z-index:3;
+	bottom:167px;
+	left:23px;
+}
+a[href="#UAC-23"] {
+	position:absolute;
+	z-index:3;
+	bottom:186px;
+	left:23px;
+}
+a[href="#UAC-22"] {
+	position:absolute;
+	z-index:3;
+	bottom:205px;
+	left:23px;
+}
