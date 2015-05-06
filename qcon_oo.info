@@ -1,6 +1,0 @@
-name = Object Oriented Quakecon BYOC Map
-description = "Interactive BYOC map and search for Quakecon."
-package = Quakecon
-core = 7.x
-stylesheets[all][] = qcon_oo.css 
-files[] = qcon_oo_class_lib.inc
