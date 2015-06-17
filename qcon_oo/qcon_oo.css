@@ -25,16 +25,17 @@ and open the template in the editor.
 #byoc-noc {
   clear:both;
 	width:228px;
-	height:255px;
+	height:272px;
 	background:#aaa;
 	position:absolute;
 	left:247px;
-	top:930px;
+	top:1074px;
 	z-index:2;
 }
 @-moz-document url-prefix() {
     #byoc-noc {
-        top:946px;
+        top:1038px;
+		height:265px;
     }
 }
 
@@ -120,13 +121,13 @@ a.byoc:hover, a.byoc-highlighted:hover, a.byoc-noseat:hover {
 }
 
 .byoc-norow.byoc-even {
-  height:36px;
+  height:39px;
   display:block;
   padding-bottom:0;
 }
 
 .byoc-norow.byoc-odd {
-  height:22px;
+  height:25px;
   display:block;
   padding-bottom:0;
 }

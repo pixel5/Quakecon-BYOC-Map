@@ -16,7 +16,7 @@ function qcon_oo_main() {
 
     $form = drupal_get_form('qcon_oo_search_form', $data);
     $output .= drupal_render($form);
-
+    
     return $output;
 }
 
@@ -55,7 +55,6 @@ function qcon_oo_get_all_players() {
                 $i++;
             }
             ksort($new_players_array[$key_section][$key_row]);
-            //$new_players_array[$key_section][$key_row] = $p_row;
         }
     }
     ksort($new_players_array);
@@ -77,7 +76,7 @@ function qcon_oo_search_form($form, &$form_state, $data) {
             'method' => 'replace',
         ),
         '#description' => "To highlight a seat, start typing and click on a name from the dropdown.",
-        '#prefix' => "<div style='float:left;width:45%;'>",
+        '#prefix' => "<div style='float:left;width:45%;padding-top:15px;'>",
         '#suffix' => "</div>"
     );
 
@@ -92,7 +91,7 @@ function qcon_oo_search_form($form, &$form_state, $data) {
             'wrapper' => 'byoc-markup-div',
             'method' => 'replace',
         ),
-        '#prefix' => "<div style='float:left;width:45%;padding-left:10px;'>",
+        '#prefix' => "<div style='float:left;width:45%;padding-left:10px;padding-top:15px;'>",
         '#suffix' => "</div>"
     );
 
@@ -100,7 +99,7 @@ function qcon_oo_search_form($form, &$form_state, $data) {
         '#type' => 'button',
         '#button_type' => 'reset',
         '#value' => t('Clear'),
-        '#prefix' => "<div style='float:left;padding-top:10px; padding-left:10px;'>",
+        '#prefix' => "<div style='float:left;padding-top:10px; padding-left:10px;padding-top:15px;'>",
         '#suffix' => "</div>",
         '#attributes' => array(
             'onclick' => 'this.form.reset(); return false;',
@@ -152,7 +151,7 @@ function qcon_oo_map($data, $autocomplete = NULL, $clan = NULL) {
     foreach ($data['U']['AC'] as $seat) {
         $default_classes = implode(' ', $seat->html_classes);
         $classes = $seat->number == $searched_seat || (strtolower($seat->clan) == $searched_clan && !empty($searched_clan)) ? $default_classes . " byoc-highlighted" : $default_classes;
-        $markup .= "<a href='#{$seat->number}' class='{$classes}' title='{$seat->number} {$seat->name} {$seat->clan}'></a>";
+        $markup .= "<a href='#{$seat->number}' class='{$classes}' title='{$seat->number} {$seat->name} {$seat->clan}' data-toggle='tooltip' data-placement='bottom'></a>";
     }
     $markup .= "</div>";
 
@@ -172,7 +171,7 @@ function qcon_oo_map($data, $autocomplete = NULL, $clan = NULL) {
                 foreach ($row as $seat_key => $seat) {
                     $default_classes = implode(' ', $seat->html_classes);
                     $classes = $seat->number == $searched_seat || (strtolower($seat->clan) == $searched_clan && !empty($searched_clan)) ? $default_classes . " byoc-highlighted" : $default_classes;
-                    $markup .= "<a href='#{$seat->number}' class='{$classes}' title='{$seat->number} {$seat->name} {$seat->clan}'></a>";
+                    $markup .= "<a href='#{$seat->number}' class='{$classes}' title='{$seat->number} {$seat->name} {$seat->clan}' data-toggle='tooltip' data-placement='bottom'></a>";
                 }
                 $markup .= "</span>";
             }
